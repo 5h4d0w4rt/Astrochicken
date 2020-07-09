@@ -1,0 +1,9 @@
+[user]
+name = %name
+email = %name@users.noreply.github.com
+signingkey = %gpgprivatekey
+[commit]
+gpgsign = true
+[program]
+pgp = /usr/local/bin/gpg
+gpg = /usr/local/bin/gpg
