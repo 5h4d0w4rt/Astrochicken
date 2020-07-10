@@ -1,2 +1,2 @@
-[includeIf "gitdir:~"]
-path = .gitconfig-personal
+[includeIf "gitdir:~/%host/%user"]
+path = .gitconfig-%host-%user
