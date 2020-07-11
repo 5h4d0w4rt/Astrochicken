@@ -1,4 +1,8 @@
 {
+  //
+  // editor
+  //
+
   "editor.autoIndent": true,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
@@ -8,6 +12,15 @@
   "editor.renderWhitespace": "boundary",
   "editor.renderIndentGuides": true,
   "editor.autoClosingQuotes": "languageDefined",
+
+  //
+  // editor
+  //
+
+  //
+  // python
+  //
+
   "python.pythonPath": "/usr/local/bin/python3.7",
   "python.formatting.provider": "yapf",
   "python.formatting.yapfArgs": [
@@ -15,16 +28,6 @@
     "{ based_on_style: google, indent_dictionary_value: true }"
   ],
   "python.linting.flake8Args": ["--max-line-length=120"],
-  "shellformat.effectLanguages": ["shellscript"],
-  "shellcheck.enable": true,
-  "shellcheck.executablePath": "shellcheck",
-  "shellcheck.run": "onSave",
-  "shellcheck.customArgs": [
-    "--shell=bash",
-    "--severity=warning",
-    "--check-sourced",
-    "--wiki-link-count=2"
-  ],
   "python.linting.pylintUseMinimalCheckers": true,
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
@@ -40,6 +43,34 @@
   "python.testing.promptToConfigure": true,
   "python.testing.unittestEnabled": false,
   "python.testing.nosetestsEnabled": false,
+
+  //
+  // python
+  //
+
+  //
+  //   bash
+  //
+
+  "shellformat.effectLanguages": ["shellscript"],
+  "shellcheck.enable": true,
+  "shellcheck.executablePath": "shellcheck",
+  "shellcheck.run": "onSave",
+  "shellcheck.customArgs": [
+    "--shell=bash",
+    "--severity=warning",
+    "--check-sourced",
+    "--wiki-link-count=2"
+  ],
+
+  //
+  //   bash
+  //
+
+  //
+  //   gitlens + git
+  //
+
   "gitlens.insiders": true,
   "git.autofetch": true,
   "git.confirmForcePush": true,
@@ -47,6 +78,16 @@
   "git.showProgress": true,
   "git.autoStash": true,
   "git.openDiffOnClick": true,
+  "git.suggestSmartCommit": false,
+
+  //
+  // gitlens + git
+  //
+
+  //
+  //   liveshare
+  //
+
   "liveshare.allowGuestTaskControl": true,
   "liveshare.allowGuestDebugControl": true,
   "liveshare.anonymousGuestApproval": "reject",
@@ -61,27 +102,41 @@
   "liveshare.codeLens": true,
   "liveshare.shareExternalFiles": true,
   "chat.autoLaunchLiveShareChat": false,
+  "liveshare.connectionMode": "auto",
+  "python.dataScience.liveShareConnectionTimeout": 100000,
+  "liveshare.account": "${env:GITHUB_USER}",
+  "liveshare.accountProvider": "github",
+
+  //
+  // liveshare
+  //
+
+  //
+  //   javascript/typescript
+  //
+
+  "eslint.enable": true,
+  "eslint.options": {
+    "extends": ["eslint:recommended", "google"]
+  },
+  "eslint.run": "onSave",
+
+  //
+  // javascript/typescript
+  //
+
+  //
+  //   miscellaneous
+  //
+
   "markdownlint.run": "onSave",
   "diffEditor.ignoreTrimWhitespace": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.autoSave": "afterDelay",
   "telemetry.enableTelemetry": false,
-  "liveshare.connectionMode": "auto",
   "yaml.format.enable": true,
   "json.format.enable": true,
-  "terraform.telemetry.enabled": false,
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path": "/~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.minikube-path.mac": "/Users/$USER/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.helm-path.mac": "/Users/$USER/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.draft-path.mac": "/Users/$USER/.vs-kubernetes/tools/draft/darwin-amd64/draft"
-  },
-  "eslint.enable": true,
-  "eslint.options": {
-    "extends": ["eslint:recommended", "google"]
-  },
-  "eslint.run": "onSave",
   "[yaml]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -91,6 +146,15 @@
       "strings": true
     }
   },
-  "git.suggestSmartCommit": false,
-  "liveshare.accountProvider": "github"
+
+  "vs-kubernetes": {
+    "vs-kubernetes.minikube-path": "/~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.minikube-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vs-kubernetes.helm-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+    "vs-kubernetes.draft-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+  }
+
+  //
+  // misc
+  //
 }
