@@ -1,2 +1,2 @@
 [includeIf "gitdir:~/%host/%user"]
-path = .gitconfig-%host-%user
+path = .gitconfig-%host-%fromenv-github_user
