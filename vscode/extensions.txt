@@ -1,8 +1,8 @@
-almenon.arepl
 BazelBuild.vscode-bazel
 BriteSnow.vscode-toggle-quotes
-buianhthang.xml2json
 DavidAnson.vscode-markdownlint
+almenon.arepl
+buianhthang.xml2json
 dbaeumer.vscode-eslint
 eamodio.gitlens
 eriklynd.json-tools
