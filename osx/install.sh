@@ -1,3 +1,5 @@
+set -euo pipefail
+
 _brew_installed() {
     command -v brew >/dev/null 2>&1
 }
