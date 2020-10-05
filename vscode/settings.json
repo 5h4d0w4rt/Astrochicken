@@ -1,160 +1,187 @@
 {
-  //
-  // editor
-  //
-
-  "editor.autoIndent": true,
-  "editor.detectIndentation": false,
-  "editor.formatOnSave": true,
-  "editor.renderControlCharacters": true,
-  "editor.renderFinalNewline": true,
-  "editor.renderLineHighlight": "all",
-  "editor.renderWhitespace": "boundary",
-  "editor.renderIndentGuides": true,
-  "editor.autoClosingQuotes": "languageDefined",
-
-  //
-  // editor
-  //
-
-  //
-  // python
-  //
-
-  "python.pythonPath": "/usr/local/bin/python3.7",
-  "python.formatting.provider": "yapf",
-  "python.formatting.yapfArgs": [
-    "--style",
-    "{ based_on_style: google, indent_dictionary_value: true }"
-  ],
-  "python.linting.flake8Args": ["--max-line-length=120"],
-  "python.linting.pylintUseMinimalCheckers": true,
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.linting.lintOnSave": true,
-  "python.linting.banditEnabled": true,
-  "python.linting.maxNumberOfProblems": 100,
-  "python.analysis.cacheFolderPath": "~/Library/Application Support/Code/.__python_analysis_cache",
-  "python.testing.pytestEnabled": true,
-  "python.testing.pytestArgs": ["--exitfirst", "--verbose"],
-  "python.testing.pytestPath": "pytest",
-  "python.testing.autoTestDiscoverOnSaveEnabled": true,
-  "python.testing.promptToConfigure": true,
-  "python.testing.unittestEnabled": false,
-  "python.testing.nosetestsEnabled": false,
-
-  //
-  // python
-  //
-
-  //
-  //   bash
-  //
-
-  "shellformat.effectLanguages": ["shellscript"],
-  "shellcheck.enable": true,
-  "shellcheck.executablePath": "shellcheck",
-  "shellcheck.run": "onSave",
-  "shellcheck.customArgs": [
-    "--shell=bash",
-    "--severity=warning",
-    "--check-sourced",
-    "--wiki-link-count=2"
-  ],
-
-  //
-  //   bash
-  //
-
-  //
-  //   gitlens + git
-  //
-
-  "gitlens.insiders": true,
-  "git.autofetch": true,
-  "git.confirmForcePush": true,
-  "git.inputValidation": "always",
-  "git.showProgress": true,
-  "git.autoStash": true,
-  "git.openDiffOnClick": true,
-  "git.suggestSmartCommit": false,
-
-  //
-  // gitlens + git
-  //
-
-  //
-  //   liveshare
-  //
-
-  "liveshare.allowGuestTaskControl": true,
-  "liveshare.allowGuestDebugControl": true,
-  "liveshare.anonymousGuestApproval": "reject",
-  "liveshare.focusBehavior": "prompt",
-  "liveshare.featureSet": "insiders",
-  "liveshare.autoShareTerminals": true,
-  "liveshare.keepAliveInterval": 10,
-  "liveshare.autoShareServers": true,
-  "liveshare.increasedGuestLimit": true,
-  "liveshare.languages.allowGuestCommandControl": true,
-  "liveshare.populateGitCoAuthors": "always",
-  "liveshare.codeLens": true,
-  "liveshare.shareExternalFiles": true,
-  "chat.autoLaunchLiveShareChat": false,
-  "liveshare.connectionMode": "auto",
-  "python.dataScience.liveShareConnectionTimeout": 100000,
-  "liveshare.account": "${env:GITHUB_USER}",
-  "liveshare.accountProvider": "github",
-
-  //
-  // liveshare
-  //
-
-  //
-  //   javascript/typescript
-  //
-
-  "eslint.enable": true,
-  "eslint.options": {
-    "extends": ["eslint:recommended", "google"]
-  },
-  "eslint.run": "onSave",
-
-  //
-  // javascript/typescript
-  //
-
-  //
-  //   miscellaneous
-  //
-
-  "markdownlint.run": "onSave",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "files.autoSave": "afterDelay",
-  "telemetry.enableTelemetry": false,
-  "yaml.format.enable": true,
-  "json.format.enable": true,
-  "[yaml]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.quickSuggestions": {
-      "other": true,
-      "comments": false,
-      "strings": true
-    }
-  },
-
-  "vs-kubernetes": {
-    "vs-kubernetes.minikube-path": "/~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.minikube-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
-    "vs-kubernetes.helm-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/helm/darwin-amd64/helm",
-    "vs-kubernetes.draft-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/draft/darwin-amd64/draft"
-  }
-
-  //
-  // misc
-  //
+    //
+    // editor
+    //
+    "window.nativeFullScreen": true,
+    "window.newWindowDimensions": "maximized",
+    "window.nativeTabs": true,
+    "editor.autoIndent": "advanced",
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "editor.renderControlCharacters": true,
+    "editor.renderFinalNewline": true,
+    "editor.renderLineHighlight": "all",
+    "editor.renderWhitespace": "boundary",
+    "editor.renderIndentGuides": true,
+    "editor.autoClosingQuotes": "languageDefined",
+    //
+    // editor
+    //
+    //   integrated terminal
+    "terminal.explorerKind": "integrated",
+    "terminal.integrated.shellArgs.osx": [],
+    "terminal.integrated.drawBoldTextInBrightColors": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.inheritEnv": true,
+    "terminal.integrated.environmentChangesIndicator": "warnonly",
+    //
+    // python
+    //
+    "python.pythonPath": "/usr/local/bin/python3.8",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "-l",
+        "100"
+    ],
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{ based_on_style: yapf, indent_dictionary_value: true, column_limit: 100, indent_width: 4 }"
+    ],
+    "python.linting.flake8Args": [
+        "--max-line-length=100"
+    ],
+    "python.linting.pylintUseMinimalCheckers": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.linting.banditEnabled": true,
+    "python.linting.maxNumberOfProblems": 100,
+    "python.analysis.cacheFolderPath": "~/Library/Application Support/Code/.__python_analysis_cache",
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "--exitfirst",
+        "--verbose"
+    ],
+    "python.testing.pytestPath": "pytest",
+    "python.testing.autoTestDiscoverOnSaveEnabled": true,
+    "python.testing.promptToConfigure": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.analysis.autoImportCompletions": true,
+    "python.autoUpdateLanguageServer": true,
+    "python.analysis.cachingLevel": "Default",
+    //
+    // python
+    //
+    //
+    // golang
+    //
+    "go.toolsEnvVars": {
+        "GOBIN": "/Users/${USER}/go/bin"
+    },
+    "go.lintOnSave": "workspace",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    //
+    //
+    //
+    //
+    //   bash
+    //
+    "shellformat.effectLanguages": [
+        "shellscript"
+    ],
+    "shellcheck.enable": true,
+    "shellcheck.executablePath": "shellcheck",
+    "shellcheck.run": "onSave",
+    "shellcheck.customArgs": [
+        "--shell=bash",
+        "--severity=warning",
+        "--check-sourced",
+        "--wiki-link-count=2"
+    ],
+    //
+    //   bash
+    //
+    //
+    //   gitlens + git
+    //
+    "gitlens.insiders": true,
+    "git.autofetch": true,
+    "git.confirmForcePush": true,
+    "git.inputValidation": "always",
+    "git.showProgress": true,
+    "git.autoStash": true,
+    "git.openDiffOnClick": true,
+    "git.suggestSmartCommit": false,
+    //
+    // gitlens + git
+    //
+    //
+    //   liveshare
+    //
+    "liveshare.allowGuestTaskControl": true,
+    "liveshare.allowGuestDebugControl": true,
+    "liveshare.anonymousGuestApproval": "reject",
+    "liveshare.focusBehavior": "prompt",
+    "liveshare.featureSet": "insiders",
+    "liveshare.autoShareTerminals": true,
+    "liveshare.keepAliveInterval": 10,
+    "liveshare.autoShareServers": true,
+    "liveshare.increasedGuestLimit": true,
+    "liveshare.languages.allowGuestCommandControl": true,
+    "liveshare.populateGitCoAuthors": "always",
+    "liveshare.codeLens": true,
+    "liveshare.shareExternalFiles": true,
+    "chat.autoLaunchLiveShareChat": false,
+    "liveshare.connectionMode": "auto",
+    "python.dataScience.liveShareConnectionTimeout": 100000,
+    "liveshare.accountProvider": "github",
+    "liveshare.account": "${env:GITHUB_USER}",
+    //
+    // liveshare
+    //
+    //
+    //   javascript/typescript
+    //
+    "eslint.enable": true,
+    "eslint.options": {
+        "extends": [
+            "eslint:recommended",
+            "google"
+        ]
+    },
+    "eslint.run": "onSave",
+    //
+    // javascript/typescript
+    //
+    //
+    //   miscellaneous
+    //
+    "markdownlint.run": "onSave",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "telemetry.enableTelemetry": false,
+    "yaml.format.enable": true,
+    "json.format.enable": true,
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path": "/~/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.minikube-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.helm-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.draft-path.mac": "/Users/${env:USER}/.vs-kubernetes/tools/draft/darwin-amd64/draft"
+    },
+    "scm.alwaysShowActions": true,
+    "workbench.editor.showTabs": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.languageServer": "Pylance",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.typeCheckingMode": "basic",
+    "window.zoomLevel": 0
+    //
+    // misc
+    //
 }

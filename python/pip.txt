@@ -9,7 +9,7 @@ greenlet
 idna
 itsdangerous
 Jinja2
-locustio
+locust
 MarkupSafe
 msgpack
 pip
