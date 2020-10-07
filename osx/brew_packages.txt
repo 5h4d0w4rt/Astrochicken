@@ -21,11 +21,10 @@ gettext
 git
 glib
 gmp
-gnu-sed
+coreutils
 gnu-tar
 gnutls
 go
-google-cloud-sdk
 helm
 icu4c
 jansson
