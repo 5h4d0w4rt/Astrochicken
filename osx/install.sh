@@ -13,3 +13,4 @@ readonly DIR
 
 # install all the packages
 for x in $(cat ${DIR}/brew_packages.txt); do brew install $x; done
+for x in $(cat ${DIR}/cask_packages.txt); do brew cask install $x; done
