@@ -81,6 +81,7 @@ pyenv
 python
 python3
 python@3.8
+python@3.9
 qemu
 readline
 redis
